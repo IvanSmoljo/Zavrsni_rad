@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/kontakt.css" />
+    <script src="../hamburger.js" async></script>
+    <title>Kontakt</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-pic">
+        <img src="../photos/treeLogo.PNG" class="tree" />
+      </div>
+      <div class="opg-name">OPG MED</div>
+      <a href="#" class="hamburger-menu" onclick="xFunction(this)">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </a>
+      <ul class="ul-nav">
+        <li><a href="../index.html">O nama</a></li>
+        <li><a href="proizvodi.html">Proizvodi</a></li>
+        <li class="current"><a href="#">Kontak</a></li>
+        <li><a class="prijavaBtn" href="prijava.html">Prijava</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="container">
+        <section class="contact-section">
+          <div class="contact-form">
+            <h2>Kontaktirajte nas</h2>
+            <form id="contactForm" class="contact" action="" method="POST">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="text-box"
+                placeholder="Vaše ime..."
+                required
+              />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                class="text-box"
+                placeholder="Vaš email..."
+                required
+              />
+              <textarea
+                class="text-box"
+                id="message"
+                name="message"
+                cols="50"
+                rows="10"
+              ></textarea>
+              <input
+                type="submit"
+                name="submit"
+                class="send-btn"
+                value="Pošalji"
+              />
+            </form>
+          </div>
+          <div class="contact-info">
+            <h2>Adresa</h2>
+            <p>Adresa,grad,država</p>
+            <h2>Mail</h2>
+            <p>imeOPGa@gmail.com</p>
+            <h2>Telefon</h2>
+            <p>+000 123456789</p>
+            <p>+000 123456</p>
+          </div>
+        </section>
+        <section class="map-section">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659.1451108311375!2d18.392435829234813!3d45.33746599869372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDIwJzE0LjkiTiAxOMKwMjMnMzQuNyJF!5e1!3m2!1shr!2shr!4v1626008128399!5m2!1shr!2shr"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <img src="../photos/treeLogo.PNG" class="tree" alt="logo" width="100px" />
+      <a href="#top" class="na-vrh">Na vrh</a>
+      <ul class="ul-foot">
+        <li>
+          <a href="https://www.facebook.com" class="facebook"
+            ><img src="../photos/facebook_icon.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img src="../photos/instagram_icon.png" alt="Instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><img src="../photos/twitter_icon.png" alt="Twitter"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5U4e-9GH3PAvsTfLJJCYdnNmGUPkxToE",
+        authDomain: "zavrsni-e173c.firebaseapp.com",
+        projectId: "zavrsni-e173c",
+        storageBucket: "zavrsni-e173c.appspot.com",
+        messagingSenderId: "988563151983",
+        appId: "1:988563151983:web:33b3ad8b5015d451e0419a",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", submitForm);
+
+      function submitForm(e) {
+        e.preventDefault();
+
+        var name1 = getInputVal("name");
+        var email1 = getInputVal("email");
+        var message1 = getInputVal("message");
+        try {
+          const docRef = addDoc(collection(db, "users"), {
+            name: name1,
+            email: email1,
+            message: message1,
+          }).then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+          });
+          alert("Uspješno ste poslali upit. Hvala!");
+        } catch (e) {
+          console.error("Error adding document: ", e);
+          alert("Greška pri slanju upita!");
+        }
+      }
+
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+    </script>
+  </body>
+</html>

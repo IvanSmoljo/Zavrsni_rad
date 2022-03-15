@@ -1,0 +1,176 @@
+.kupovina-proizvoda {
+  margin-top: 0px;
+  padding-top: 300px;
+  text-align: center;
+}
+
+.container-kosarica {
+  padding-top: 0px;
+  max-width: 1000px;
+  margin: auto auto;
+  background-color: rgb(204, 219, 214);
+}
+
+.naslov-proizvoda {
+  text-align: center;
+  font-size: 2.5em;
+  padding: 1em;
+  color: rgb(184, 170, 44);
+}
+
+.vrste-proizvoda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.konkretan-proizvod {
+  margin: 30px;
+  display: block;
+}
+
+.ime-proizvoda {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.slika-proizvoda {
+  height: 250px;
+  width: 310px;
+}
+
+.detalji-proizvoda {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.cijena-proizvoda {
+  flex-grow: 1;
+  color: #000000;
+  font-weight: bold;
+}
+
+.btn {
+  text-align: center;
+  padding: 0.67em 0.67em;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #56ccf2;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #2d9cdb;
+}
+
+.naslov-kosarica {
+  text-align: center;
+}
+
+.kosarica-redak {
+  display: flex;
+}
+
+.kosarica-proizvod {
+  width: 45%;
+}
+
+.kosarica-cijena {
+  width: 20%;
+}
+
+.kosarica-kolicina {
+  width: 35%;
+}
+
+.kosarica-naslov {
+  font-weight: bold;
+}
+
+.ime-u-kosarici {
+  color: #333;
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+.slika-u-kosarici {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.kosarica-stupac {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.kosarica-redak:last-child {
+  border-bottom: 1px solid black;
+}
+
+.kosarica-redak:last-child .kosarica-stupac {
+  border: none;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #eb5757;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #cc4c4c;
+}
+
+.unos-kolicine {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.kosarica-ukupno {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.ukupno-naslov {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.ukupno-cijena {
+  color: #333;
+  font-size: 1.1em;
+}
+
+.btn-kupi {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.75em;
+}

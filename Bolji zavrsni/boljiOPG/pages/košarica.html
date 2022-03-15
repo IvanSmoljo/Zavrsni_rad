@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/kosarica.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../hamburger.js" async></script>
+    <script src="kosarica.js" async></script>
+
+    <title>Košarica</title>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <div class="nav-pic">
+        <a href="../index.html">
+          <img src="../photos/treeLogo.PNG" class="tree" />
+        </a>
+      </div>
+      <div class="opg-name">OPG MED</div>
+      <a href="#current" class="hamburger-menu" onclick="xFunction(this)">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </a>
+      <ul class="ul-nav">
+        <!-- <li><a href="../index.html">O nama</a></li> -->
+        <li><a href="proizvodi.html">Proizvodi</a></li>
+        <li><a href="galerija.html">Galerija</a></li>
+        <li class="current"><a href="#">Košarica</a></li>
+        <li><a id="odjavaIzKosarice" href="prijava.html">Odjava</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="kupovina-proizvoda">Proizvodi za prodaju</h1>
+
+      <section class="container-kosarica">
+        <h2 class="naslov-proizvoda">MED</h2>
+        <div class="vrste-proizvoda">
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Cvjetni med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">12.99HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Bagremov med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">13.99HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Cvjetni med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">14.00HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Miješani med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">10.00HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-kosarica">
+        <h2 class="naslov-proizvoda">MED1111</h2>
+        <div class="vrste-proizvoda">
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Cvjetni med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">12.99HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Bagremov med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">13.99HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Cvjetni med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">14.00HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+          <div class="konkretan-proizvod">
+            <span class="ime-proizvoda">Miješani med</span>
+            <img class="slika-proizvoda" src="../photos/slikaMeda.jpg" />
+            <div class="detalji-proizvoda">
+              <span class="cijena-proizvoda">10.00HRK</span>
+              <button class="btn btn-primary kupi-proizvod-btn" type="button">
+                DODAJ U KOŠARICU
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <h2 class="naslov-kosarica">U KOŠARICI</h2>
+        <div class="kosarica-redak">
+          <span class="kosarica-proizvod kosarica-naslov kosarica-stupac"
+            >PROIZVOD</span
+          >
+          <span class="kosarica-cijena kosarica-naslov kosarica-stupac"
+            >CIJENA</span
+          >
+          <span class="kosarica-kolicina kosarica-naslov kosarica-stupac"
+            >KOLIČINA</span
+          >
+        </div>
+        <div class="proizvodi-u-kosarici"></div>
+        <div class="kosarica-ukupno">
+          <strong class="ukupno-naslov">Ukupno</strong>
+          <span class="ukupno-cijena">0HRK</span>
+        </div>
+        <button class="btn btn-primary btn-kupi" type="button">KUPI</button>
+      </section>
+    </main>
+
+    <footer>
+      <img src="../photos/treeLogo.PNG" class="tree" alt="logo" width="100px" />
+      <a href="#top" class="na-vrh">Na vrh</a>
+      <ul class="ul-foot">
+        <li>
+          <a href="https://www.facebook.com" class="facebook"
+            ><img src="../photos/facebook_icon.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img src="../photos/instagram_icon.png" alt="Instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><img src="../photos/twitter_icon.png" alt="Twitter"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5U4e-9GH3PAvsTfLJJCYdnNmGUPkxToE",
+        authDomain: "zavrsni-e173c.firebaseapp.com",
+        projectId: "zavrsni-e173c",
+        storageBucket: "zavrsni-e173c.appspot.com",
+        messagingSenderId: "988563151983",
+        appId: "1:988563151983:web:33b3ad8b5015d451e0419a",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const signOutB = document.getElementById("odjavaIzKosarice");
+      signOutB.addEventListener("click", (e) => {
+        signOut(auth)
+          .then(() => {
+            alert("Odjavili ste se");
+
+            // Sign-out successful.
+          })
+          .catch((error) => {
+            alert("Greska pri odjavi");
+            // An error happened.
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+.container {
+  padding-top: 50px;
+  margin-bottom: 0px;
+  max-width: 900px;
+  margin: auto auto;
+  /* background-color: rgb(204, 219, 214); */
+}
+
+.naslov-proizvoda {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 0px;
+  padding-top: 90px;
+  color: rgb(255, 197, 50);
+}
+
+.zaKupovinu {
+  text-align: center;
+  color: rgb(194, 46, 46);
+  font-weight: bold;
+}
+
+.vrste-proizvoda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.konkretan-proizvod {
+  margin: 30px;
+  display: block;
+}
+.vise-o-proizvodu {
+  color: rgb(189, 189, 189);
+}
+.ime-proizvoda {
+  color: rgb(162, 206, 184);
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.slika-proizvoda {
+  height: 250px;
+}
+
+.detalji-proizvoda {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+@media (max-width: 900px) and (min-width: 320px) {
+  .slika-proizvoda {
+    height: 250px;
+    width: 310px;
+  }
+  .container {
+    padding-top: 270px;
+  }
+}

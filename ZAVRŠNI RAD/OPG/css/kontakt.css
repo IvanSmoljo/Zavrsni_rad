@@ -1,0 +1,42 @@
+.contact-section {
+  width: 100%;
+  padding-top: 150px;
+  text-align: center;
+}
+.contact-form {
+  width: 100%;
+  display: block;
+}
+.contact-section h2 {
+  margin: 5px;
+}
+
+.text-box {
+  margin: auto auto;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.map-section {
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+.map-section iframe {
+  width: 500px;
+  height: 400px;
+}
+@media (max-width: 900px) and (min-width: 320px) {
+  .map-section {
+    max-width: 310px;
+  }
+  .map-section iframe {
+    margin: auto auto;
+    width: 310px;
+    height: 200px;
+  }
+
+  .text-box {
+    width: 310px;
+  }
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <link rel="stylesheet" href="glide-3.4.1/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="glide-3.4.1/dist/css/glide.theme.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="hamburger.js" async></script>
+
+    <title>OPG MED</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-pic">
+        <a href="#">
+          <img src="photos/treeLogo.PNG" class="tree" />
+        </a>
+      </div>
+      <div class="opg-name">OPG MED</div>
+
+      <a href="#current" class="hamburger-menu" onclick="xFunction(this)">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </a>
+
+      <ul class="ul-nav">
+        <!-- <li class="current"><a href="#">O nama</a></li> -->
+        <li><a href="pages/proizvodi.html">Proizvodi</a></li>
+        <li><a href="pages/galerija.html">Galerija</a></li>
+        <li><a class="prijavaBtn" href="pages/prijava.html">Prijava</a></li>
+      </ul>
+    </nav>
+
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img class="pic1" src="photos/slide1.jpg" alt="" />
+            <div class="onama">
+              <h1>O NAMA</h1>
+              <h2>Nasa priča počinje davne 1997. godine</h2>
+            </div>
+          </li>
+          <li class="glide__slide">
+            <img class="pic1" src="photos/slide2.jpg" alt="" />
+            <div class="onama">
+              <h1>O NAMA</h1>
+              <h2>Bavimo se pčelarstvom</h2>
+            </div>
+          </li>
+          <li class="glide__slide">
+            <img class="pic1" src="photos/slide3.jpg" alt="" />
+            <div class="onama">
+              <h1>O NAMA</h1>
+              <h2>Možete kupiti naše prizvode kad se registrirate</h2>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+      </div>
+      <!--  <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          prev
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          next
+        </button>
+      </div> -->
+    </div>
+    <!--  <div class="konkretan-proizvod">
+      <span class="ime-proizvoda">Cvjetni med</span>
+      <img class="slika-proizvoda" src="photos/slikaMeda.jpg" width="100%" />
+      <div class="detalji-proizvoda">
+        <span class="vise-o-proizvodu"
+          ><a href="pages/proizvodi.html">Više...</a></span
+        >
+      </div>
+    </div>
+    <div class="konkretan-proizvod2">
+      <span class="ime-proizvoda">Bagremov med</span>
+      <img class="slika-proizvoda" src="photos/slikaMeda.jpg" width="100%" />
+      <div class="detalji-proizvoda">
+        <span class="vise-o-proizvodu"
+          ><a href="pages/proizvodi.html">Više...</a></span
+        >
+      </div>
+    </div> -->
+    <div class="prizvodiZaManjiScreen">
+      <div class="konkretan-proizvod3">
+        <img class="slika-proizvoda" src="photos/slikaMeda.jpg" width="100%" />
+        <h2 class="ime-proizvoda">Cvjetni med</h2>
+        <p>Konkretan opis proizvoda</p>
+
+        <div class="detalji-proizvoda">
+          <span class="vise-o-proizvodu"
+            ><a href="pages/proizvodi.html">Više</a></span
+          >
+        </div>
+      </div>
+      <div class="konkretan-proizvod4">
+        <img class="slika-proizvoda" src="photos/slikaMeda.jpg" width="100%" />
+        <h2 class="ime-proizvoda">Lipov med</h2>
+        <p>Konkretan opis proizvoda</p>
+
+        <div class="detalji-proizvoda">
+          <span class="vise-o-proizvodu"
+            ><a href="pages/proizvodi.html">Više</a></span
+          >
+        </div>
+      </div>
+      <div class="konkretan-proizvod5">
+        <img class="slika-proizvoda" src="photos/slikaMeda.jpg" width="100%" />
+        <h2 class="ime-proizvoda">Bagremov med</h2>
+        <p>Konkretan opis proizvoda</p>
+
+        <div class="detalji-proizvoda">
+          <span class="vise-o-proizvodu"
+            ><a href="pages/proizvodi.html">Više</a></span
+          >
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="container">
+        <section class="contact-section">
+          <div class="contact-form">
+            <form id="contactForm" class="contact" action="" method="POST">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="text-box"
+                placeholder="Vaše ime..."
+                required
+              />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                class="text-box"
+                placeholder="Vaš email..."
+                required
+              />
+              <textarea
+                class="text-area"
+                id="message"
+                name="message"
+                cols="50"
+                rows="10"
+                style="resize: none"
+              ></textarea>
+              <input
+                type="submit"
+                name="submit"
+                class="send-btn"
+                value="Pošalji"
+              />
+            </form>
+          </div>
+        </section>
+        <section class="map-section">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659.1451108311375!2d18.392435829234813!3d45.33746599869372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDIwJzE0LjkiTiAxOMKwMjMnMzQuNyJF!5e1!3m2!1shr!2shr!4v1626008128399!5m2!1shr!2shr"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <div class="contact-info">
+            <h2>Adresa</h2>
+            <p>Adresa,grad,država</p>
+            <h2>Mail</h2>
+            <p>imeOPGa@gmail.com</p>
+            <h2>Telefon</h2>
+            <p>+000 123456789</p>
+            <p>+000 123456</p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-pic">
+        <img src="photos/treeLogo.PNG" class="tree" alt="logo" />
+      </div>
+      <a href="#top" class="na-vrh">Na vrh</a>
+      <ul class="ul-foot">
+        <li>
+          <a href="https://www.facebook.com" class="facebook"
+            ><img src="photos/facebook_icon.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img src="photos/instagram_icon.png" alt="Instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><img src="photos/twitter_icon.png" alt="Twitter"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5U4e-9GH3PAvsTfLJJCYdnNmGUPkxToE",
+        authDomain: "zavrsni-e173c.firebaseapp.com",
+        projectId: "zavrsni-e173c",
+        storageBucket: "zavrsni-e173c.appspot.com",
+        messagingSenderId: "988563151983",
+        appId: "1:988563151983:web:33b3ad8b5015d451e0419a",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", submitForm);
+
+      function submitForm(e) {
+        e.preventDefault();
+
+        var name1 = getInputVal("name");
+        var email1 = getInputVal("email");
+        var message1 = getInputVal("message");
+        try {
+          const docRef = addDoc(collection(db, "users"), {
+            name: name1,
+            email: email1,
+            message: message1,
+          }).then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+          });
+          alert("Uspješno ste poslali upit. Hvala!");
+        } catch (e) {
+          console.error("Error adding document: ", e);
+          alert("Greška pri slanju upita!");
+        }
+      }
+
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+    </script>
+
+    <script src="glide-3.4.1/dist/glide.min.js" async></script>
+    <script async>
+      document.addEventListener("DOMContentLoaded", () => {
+        new Glide(".glide", {
+          hoverpause: false,
+          autoplay: 4000,
+          gap: 0,
+        }).mount();
+      });
+    </script>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        let content = document.querySelector(".konkretan-proizvod");
+        let content2 = document.querySelector(".konkretan-proizvod2");
+        let content3 = document.querySelector(".konkretan-proizvod3");
+        let content4 = document.querySelector(".konkretan-proizvod4");
+        let content5 = document.querySelector(".konkretan-proizvod5");
+        let trigger = document.querySelector(".konkretan-proizvod3");
+        let trigger2 = document.querySelector(".konkretan-proizvod3");
+        let contentPosition = trigger.getBoundingClientRect().top;
+        let contentPosition2 = trigger2.getBoundingClientRect().top;
+
+        let screenPosition = window.innerHeight / 1.2;
+        let screenPosition2 = window.innerHeight / 1.1;
+
+        const width =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        if (width > 900) {
+          if (contentPosition < screenPosition) {
+            content3.classList.add("active");
+            content4.classList.add("active");
+            content5.classList.add("active");
+          } else {
+            content3.classList.remove("active");
+            content4.classList.remove("active");
+            content5.classList.remove("active");
+          }
+        } else {
+          /*           content.classList.remove("active");
+          content2.classList.remove("active"); */
+          if (contentPosition2 < screenPosition2) {
+            content3.classList.add("active");
+            content4.classList.add("active");
+            content5.classList.add("active");
+          } else {
+            content3.classList.remove("active");
+            content4.classList.remove("active");
+            content5.classList.remove("active");
+          }
+        }
+      });
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5U4e-9GH3PAvsTfLJJCYdnNmGUPkxToE",
+        authDomain: "zavrsni-e173c.firebaseapp.com",
+        projectId: "zavrsni-e173c",
+        storageBucket: "zavrsni-e173c.appspot.com",
+        messagingSenderId: "988563151983",
+        appId: "1:988563151983:web:33b3ad8b5015d451e0419a",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      let kosaricaNav = document.querySelector(".prijavaBtn");
+      onAuthStateChanged(auth, (user) => {
+        if (user != null) {
+          // alert("Prijavljeni ste");
+          kosaricaNav.innerHTML = "Košarica";
+          kosaricaNav.href = "pages/košarica.html";
+        } else {
+          // alert("Odjavljeni ste");
+        }
+      });
+    </script>
+  </body>
+</html>

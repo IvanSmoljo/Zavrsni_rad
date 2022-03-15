@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/prijava.css" />
+    <script src="../hamburger.js" async></script>
+
+    <title>Prijava</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-pic">
+        <img src="../photos/treeLogo.PNG" class="tree" />
+      </div>
+      <div class="opg-name">OPG MED</div>
+      <a href="#" class="hamburger-menu" onclick="xFunction(this)">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </a>
+      <ul class="ul-nav">
+        <li><a href="../index.html">O nama</a></li>
+        <li><a href="proizvodi.html">Proizvodi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <main class="prijavaMain">
+      <section class="signin-section">
+        <div class="signin-form">
+          <h2>Prijava</h2>
+          <form class="signin" action="" method="POST">
+            <input
+              type="email"
+              class="text-box"
+              id="email"
+              placeholder="Vaš email"
+            />
+            <input
+              type="password"
+              class="text-box"
+              id="password"
+              placeholder="Lozinka"
+            />
+          </form>
+          <button id="signUpButton" type="button" class="send-btn">
+            Registracija
+          </button>
+          <button id="signInButton" class="send-btn">Prijava</button>
+          <button id="signOutButton" class="send-btn">Odjava</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="../photos/treeLogo.PNG" class="tree" alt="logo" width="100px" />
+      <a href="#top" class="na-vrh">Na vrh</a>
+      <ul class="ul-foot">
+        <li>
+          <a href="https://www.facebook.com" class="facebook"
+            ><img src="../photos/facebook_icon.png" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img src="../photos/instagram_icon.png" alt="Instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><img src="../photos/twitter_icon.png" alt="Twitter"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5U4e-9GH3PAvsTfLJJCYdnNmGUPkxToE",
+        authDomain: "zavrsni-e173c.firebaseapp.com",
+        projectId: "zavrsni-e173c",
+        storageBucket: "zavrsni-e173c.appspot.com",
+        messagingSenderId: "988563151983",
+        appId: "1:988563151983:web:33b3ad8b5015d451e0419a",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      onAuthStateChanged(auth, (user) => {
+        if (user != null) {
+          alert("Prijavljeni ste");
+        } else {
+          alert("Odjavljeni ste");
+        }
+      });
+
+      const signUpBtn = document.getElementById("signUpButton");
+      signUpBtn.addEventListener("click", (e) => {
+        const email1 = document.getElementById("email").value;
+        const pass1 = document.getElementById("password").value;
+        createUserWithEmailAndPassword(auth, email1, pass1)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+
+            window.location = "košarica.html";
+
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+            // ..
+          });
+      });
+
+      const signInBtn = document.getElementById("signInButton");
+      signInBtn.addEventListener("click", (e) => {
+        const email1 = document.getElementById("email").value;
+        const pass1 = document.getElementById("password").value;
+        signInWithEmailAndPassword(auth, email1, pass1)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+
+            window.location = "košarica.html";
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+            // ..
+          });
+      });
+      const signOutBtn = document.getElementById("signOutButton");
+      signOutBtn.addEventListener("click", (e) => {
+        signOut(auth)
+          .then(() => {
+            // Sign-out successful.
+          })
+          .catch((error) => {
+            alert("Greska pri odjavi");
+            // An error happened.
+          });
+      });
+    </script>
+  </body>
+</html>
